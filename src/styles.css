@@ -1,3 +1,5 @@
+@import "style-veriable.css";
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -16,12 +18,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-:root {
-  --color-green: #3AAA35;
-  --color-page: #FFF;
-  --color-text: #262626;
-}
-
 .main-content {
   height: 100%;
   width: 100%;
@@ -31,20 +27,10 @@ html, body {
   flex-wrap: wrap;
 }
 
-.section-picture {
-  margin: 0 125px 0 10px;
-  width: 40%;
-  height: 0;
-  padding-top: 50%;
-  position: relative;
-}
-
-.section-picture__img {
-  width: 100%;
-  height: 60%;
-  top: 20%;
-  left: 0;
-  position: absolute;
+.main-content__image {
+  width: 635px;
+  height: 635px;
+  margin: 30px 0 30px 30px;
   object-fit: contain;
   border: 1px solid #979797;
 }
@@ -54,11 +40,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 450px;
-}
-
-.section-submit__block {
-  width: 348px;
+  width: 350px;
+  margin: 0 20px 10px 90px;
 }
 
 .section-submit__title {
@@ -68,31 +51,30 @@ html, body {
   font-size: 24px;
   font-weight: 700;
   color: var(--color-text);
+  text-transform: uppercase;
 }
 
 .section-submit__subtitle {
   height: 96px;
-  margin: 0 2px 20px 1px;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.36;
-  letter-spacing: normal;
   color: #262626;
 }
 
+.section-submit__form {
+  margin-bottom: 10px;
+}
+
 .section-submit__input-field {
-  width: 350px;
+  width: 100%;
   height: 40px;
   margin: 0 0 10px;
-  padding: 11px 202px 12px 15px;
+  padding: 11px 0 12px 15px;
   border: solid 1px #e6e6e6;
 }
 
 .section-submit__label-checkbox {
   display: flex;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .section-submit__input-checkbox {
@@ -109,89 +91,60 @@ html, body {
 }
 
 .section-submit__button {
-  width: 350px;
+  width: 100%;
   height: 46px;
-  margin-bottom: 10px;
   background-color: var(--color-green);
   color: #FFF;
-  border: none;
   font-size: 18px;
+  border: none;
+  cursor: pointer;
 }
 
 .section-submit__text {
-  width: 324px;
-  height: 17px;
-  margin: 0 13px;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.21;
-  letter-spacing: normal;
+  margin: 0 13px 0 13px;
   color: #666;
 }
 
-@media (max-width: 1200px)  {
+.section-submit__button:hover,
+.section-submit__label-checkbox:hover {
+  opacity: .9;
+}
 
-  .section-picture {
-    margin: 0 50px 0 50px;
-    width: 50%;
-    height: 0;
-    padding-top: 50%;
-    position: relative;
+@media (max-width: 730px)  {
+
+  .main-content__image {
+    width: 535px;
+    height: 535px;
+    margin: 30px 0 20px 0;
+  }
+
+  .section-submit {
+    margin: 0;
   }
 }
 
-@media (max-width: 1000px)  {
+@media (max-width: 620px)  {
 
-  .section-picture {
-    margin: 0 10px 0 50px;
-    width: 50%;
-    height: 0;
-    padding-top: 50%;
-    position: relative;
+  .main-content__image {
+    width: 435px;
+    height: 435px;
   }
 }
 
-@media (max-width: 800px)  {
+@media (max-width: 450px)  {
 
-  .section-picture {
-    margin: 0 0 0 0;
-    width: 50%;
-    height: 0;
-    padding-top: 50%;
-    position: relative;
-  }
-}
-
-@media (max-width: 600px)  {
-
-  .section-picture {
-    width: 50%;
-    height: 0;
-    padding-top: 50%;
+  .main-content__image {
+    width: 300px;
+    height: 300px;
   }
 
-  .section-picture__img {
-    width: 100%;
-    height: 100%;
-    top: 5%;
-    left: 0;
-  }
-}
-
-@media (max-width: 400px)  {
-
-  .section-picture {
-    width: 50%;
-    height: 0;
-    padding-top: 50%;
+  .section-submit {
+    width: 300px;
+    margin-bottom: 50px;
   }
 
-  .section-picture__img {
-    width: 100%;
-    height: 100%;
-    top: 5%;
-    left: 0;
+  .section-submit__title {
+    width: 300px;
+    font-size: 22px;
   }
 }
